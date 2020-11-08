@@ -1,0 +1,52 @@
+[
+	{
+		"blog_post_id":1,
+		"posted_by":"Patrick Woo-Sam",
+		"date_posted":"2020-03-28",
+		"title":"Welcome",
+		"content":"Watch my Welcome page video for an overview of the rules of checkers.",
+		"views":3,
+		"hearts":0,
+		"date_updated":"2020-11-07"
+	},
+	{
+		"blog_post_id":2,
+		"posted_by":"Patrick Woo-Sam",
+		"date_posted":"2020-04-18",
+		"title":"The Journey Begins",
+		"content":"Today I published my 12th video - The rules overview and my 11th daily game. I've seen all sorts of moves, from weak openings to the intense workout playing Paped. Triple jumps, pins, elbows and errors protecting the back row.I hope you're enjoying these live games. Send me your ideas for things you want to see at winningcheckers@gmail.com.",
+		"views":3,
+		"hearts":0,
+		"date_updated":"2020-11-07"
+	},
+	{
+		"blog_post_id":3,
+		"posted_by":"Patrick Woo-Sam",
+		"date_posted":"2020-04-22",
+		"title":"Hello World",
+		"content":"I was able to play someone in Jamaica today and practice my French.",
+		"views":0,
+		"hearts":0,
+		"date_updated":"2020-11-07"
+	},
+	{
+		"blog_post_id":4,
+		"posted_by":"Patrick Woo-Sam",
+		"date_posted":"2020-05-04",
+		"title":"The Wide World of Checkers",
+		"content":"This week I played someone from Azerbaijan. She kept me challenged by setting traps. Fortunately I escaped them. If you want to see the traps check out Live Game 25.",
+		"views":1,
+		"hearts":0,
+		"date_updated":"2020-11-07"
+	},
+	{
+		"blog_post_id":5,
+		"posted_by":"Patrick Woo-Sam",
+		"date_posted":"2020-05-10",
+		"title":"Staying Centered",
+		"content":"I had the opportunity this week to play with someone from Tanzania and practice maintaining centers in Game 30. It was a good exercise. He told me there are several other top players from Tanzania playing this online checkers game well. I also was able to practice slipping past an opponent like Houdini in Game 31. ",
+		"views":2,
+		"hearts":0,
+		"date_updated":"2020-11-07"
+	}
+]
