@@ -27,7 +27,7 @@
 <!-- Code. -->
 
 
-  <div><h1>Let's Analyze!</h1></div>
+  <div><h1>Blog Posts</h1></div>
   
   <table>
 
@@ -41,9 +41,10 @@
 
     </thead>
 
-      <td>Total Subscribers</td><td><canvas id="YourChartNameWithoutSpacesHere" width="400" height="150"></canvas></td>
-
-     </td>
+      <td>Total Views</td><td><canvas id="views" width="400" height="150"></canvas></td>
+      <td>Total Hearts</td><td><canvas id="hearts" width="400" height="150"></canvas></td>
+   
+    </td>
 
 
   </table>
@@ -53,25 +54,44 @@
         // bar chart data
 
             var barData = {
-                labels : [ "April","May","June","July","August","September" ],
+                labels : {{ blog_post_id }},
                 datasets : [
                     {
                         fillColor : "#48A497",
                         strokeColor : "#48A4D1",
-                        data : {{ YourColumnNameHere }}
+                        data : {{ views }}
                     }
                 ]
             }
 
             // get bar chart canvas
 
-            var YourChartNameWithoutSpacesHere = document.getElementById("YourChartNameWithoutSpacesHere").getContext("2d");
+            var views = document.getElementById("views").getContext("2d");
 
             // draw bar chart
 
-            new Chart(YourChartNameWithoutSpacesHere).Bar(barData);
+            new Chart(views).Bar(barData);
 
+        // bar chart data
 
+        var barData2 = {
+                labels : {{ blog_post_id }},
+                datasets : [
+                    {
+                        fillColor : "#48A497",
+                        strokeColor : "#48A4D1",
+                        data : {{ hearts }}
+                    }
+                ]
+            }
+
+            // get bar chart canvas
+
+            var hearts = document.getElementById("hearts").getContext("2d");
+
+            // draw bar chart
+
+            new Chart(hearts).Bar(barData2);
        </script>
 
 

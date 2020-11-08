@@ -1,6 +1,7 @@
 [
 	{
 		"blog_post_id":1,
+		"channel_name":"WinningCheckers",
 		"posted_by":"Patrick Woo-Sam",
 		"date_posted":"2020-03-28",
 		"title":"Welcome",
@@ -11,6 +12,7 @@
 	},
 	{
 		"blog_post_id":2,
+		"channel_name":"WinningCheckers",
 		"posted_by":"Patrick Woo-Sam",
 		"date_posted":"2020-04-18",
 		"title":"The Journey Begins",
@@ -21,6 +23,7 @@
 	},
 	{
 		"blog_post_id":3,
+		"channel_name":"WinningCheckers",
 		"posted_by":"Patrick Woo-Sam",
 		"date_posted":"2020-04-22",
 		"title":"Hello World",
@@ -31,6 +34,7 @@
 	},
 	{
 		"blog_post_id":4,
+		"channel_name":"WinningCheckers",
 		"posted_by":"Patrick Woo-Sam",
 		"date_posted":"2020-05-04",
 		"title":"The Wide World of Checkers",
@@ -41,6 +45,7 @@
 	},
 	{
 		"blog_post_id":5,
+		"channel_name":"WinningCheckers",
 		"posted_by":"Patrick Woo-Sam",
 		"date_posted":"2020-05-10",
 		"title":"Staying Centered",

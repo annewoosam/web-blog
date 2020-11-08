@@ -1,4 +1,4 @@
-"""Server for YourFolder app."""
+"""Server for web-blogs app."""
 
 # increased flask
 
@@ -10,7 +10,7 @@ db = SQLAlchemy()
 
 # created import allowing connection to database
 
-from model import connect_to_db, YourModelNameTitleCaseSingularStats, db
+from model import connect_to_db, Blog, db
 
 app = Flask(__name__)
 
@@ -25,21 +25,29 @@ import crud
 
 @app.route('/')
 
-def all_YourModelNameLowerCasePluralStats():
+def all_blogs():
 
-    stats=crud.get_YourModelNameLowerCasePlural()
+    stats=crud.get_blogs()
     
-    YourVariableName=[q[0] for q in db.session.query(YourModelNameInTitleCaseHere.YourVariableName).all()]
+    blog_post_id=[q[0] for q in db.session.query(Blog.blog_post_id).all()]
 
-    YourNextVariableName=[q[0] for q in db.session.query(YourModelNameInTitleCaseHere.YourNextVariableName).all()]
-     
-    #repeat till next to last variable accounted for
+    channel_name=[q[0] for q in db.session.query(Blog.channel_name).all()]
+
+    posted_by=[q[0] for q in db.session.query(Blog.posted_by).all()]
+
+    date_posted=[q[0] for q in db.session.query(Blog.date_posted).all()]
+
+    title=[q[0] for q in db.session.query(Blog.title).all()]
+
+    content=[q[0] for q in db.session.query(Blog.content).all()]
+
+    views=[q[0] for q in db.session.query(Blog.views).all()]
+
+    hearts=[q[0] for q in db.session.query(Blog.hearts).all()]
       
-    YourLastVariableName=[q[0] for q in db.session.query(YourModelNameInTitleCaseHere.YourLastVariableName).all()]
-    
-    # repeat through all columns needed
+    date_updated=[q[0] for q in db.session.query(Blog.date_updated).all()]
 
-    return render_template('YourModelNameLowerCasePlural.html', YourVariable_Name=YourVariable_Name, YourNextVariableName=YourNextVariableName, YourLastVariableName=YourLastVariableName)
+    return render_template('blog_posts.html', blog_post_id=blog_post_id, channel_name=channel_name, posted_by=posted_by, date_posted=date_posted, title=title, content=content, views=views, hearts=hearts, date_updated=date_updated)
 
 if __name__ == '__main__':
 

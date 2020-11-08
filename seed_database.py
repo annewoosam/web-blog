@@ -13,9 +13,9 @@ import model
 import server
 
 
-os.system('dropdb YourFolderUnderscoredAsDatabaseNameHere')
+os.system('dropdb web_blog')
 
-os.system('createdb YourFolderUnderscoredAsDatabaseNameHere')
+os.system('createdb web_blog')
 
 model.connect_to_db(server.app)
 
@@ -24,21 +24,31 @@ model.db.create_all()
 
 # Create YourModelNameLowerCasedHere table's initial data.
 
-with open('data/YourModelNameLowerCasedSingularHere.json') as f:
+with open('data/blog_post.json') as f:
 
-    YourModelNameLowerCasedSingularHere_data = json.loads(f.read())
+    blog_data = json.loads(f.read())
 
-YourModelNameLowerCasedSingularHere_in_db = []
+blog_in_db = []
 
-for YourModelNameLowerCasedSingularHere in YourModelNameLowerCasedSingularHere_data:
-    columnNamesSeparatedbyCommasUntilLastOne= (
-                                   YourModelNameLowerCasedSingularHere['YourFirstColumnNameHere'],
-                                   YourModelNameLowerCasedSingularHere['YourNextColumnNameHereTillLast'],
-                                   YourModelNameLowerCasedSingularHere['YourLastColumnNameHere'])
+for blog in blog_data:
+    channel_name, posted_by, date_posted, title, content, views, hearts, date_updated = (
+                                   blog['channel_name'],
+                                   blog['posted_by'],
+                                   blog['date_posted'],
+                                   blog['title'],
+                                   blog['content'],
+                                   blog['views'],
+                                   blog['hearts'],
+                                   blog['date_updated'])
 
-    db_YourModelNameLowerCasedSingularHere = crud.create_YourModelNameLowerCasedSingularHere(
-                                 YourFirstColumnNameHere,
-                                 YourNextColumnNameHereTillLast,
-                                 YourLastColumnNameHere)
+    db_blog = crud.create_blog(
+                                 channel_name,
+                                 posted_by,
+                                 date_posted,
+                                 title,
+                                 content,
+                                 views,
+                                 hearts,
+                                 date_updated)
 
-    YourModelNameLowerCasedSingularHere_in_db.append(db_YourModelNameLowerCasedSingularHere)
+    blog_in_db.append(db_blog)
